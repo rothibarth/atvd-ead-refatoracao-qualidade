@@ -6,11 +6,14 @@
     <title>Cadastro de Usuários</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <script src="./js/script1.js"></script>
-    <script src="./js/scriptExtra.js"></script>
-    <script src="./js/utilsScript.js"></script>
+    
 </head>
 <body>
     <div class="container">
+
+        <button id="navigateBtnContato">Ir para a Tela de Contato</button>
+        <button id="navigateBtnSobre">Ir para a Tela Sobre</button>
+
         <h1>Cadastro de Usuários</h1>
         <label for="nomeUsuario">Nome:</label>
         <input type="text" id="nomeUsuario" placeholder="Digite seu nome">
@@ -21,6 +24,14 @@
         <ul id="listausers"></ul>
     </div>
 
-    
+    <script>
+        document.getElementById("navigateBtnContato").addEventListener("click", function() {
+            window.location.href = "paginas/contato.html";  // Redireciona para 'contato.html' ao clicar no botão
+        });
+        document.getElementById("navigateBtnSobre").addEventListener("click", function() {
+            window.location.href = "paginas/sobre.html";  // Redireciona para 'contato.html' ao clicar no botão
+        });
+    </script>
+
 </body>
 </html>

@@ -8,7 +8,41 @@
 </head>
 <body>
     <div class="container">
-        <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6" alt="Cachorro">
+        <button id="navigateBtn">Voltar à Página Inicial</button>
+        <h1>Sobre o Contato</h1>
+        
+        <section>
+            <h2>Quem Somos</h2>
+            <p>
+                Somos uma equipe dedicada a fornecer soluções de comunicação eficientes para nossos usuários. 
+                Nosso objetivo é garantir que você tenha a melhor experiência ao entrar em contato conosco, 
+                seja para tirar dúvidas, dar feedback ou reportar problemas.
+            </p>
+        </section>
+
+        <section>
+            <h2>Nossa Missão</h2>
+            <p>
+                Facilitar a comunicação entre usuários e nossa plataforma, oferecendo ferramentas 
+                intuitivas e um suporte ágil para atender às suas necessidades.
+            </p>
+        </section>
+
+        <section>
+            <h2>Como Funciona</h2>
+            <p>
+                Utilizamos um sistema integrado para gerenciar todas as suas mensagens e garantir 
+                que sejam respondidas no menor tempo possível. Seja por e-mail, formulário de contato 
+                ou chat, estamos sempre prontos para ajudar.
+            </p>
+        </section>
     </div>
+
+    <script>
+        // Navegação de volta para a página inicial
+        document.getElementById("navigateBtn").addEventListener("click", function() {
+            window.location.href = "../index.html"; // Redireciona para a página inicial
+        });
+    </script>
 </body>
 </html>

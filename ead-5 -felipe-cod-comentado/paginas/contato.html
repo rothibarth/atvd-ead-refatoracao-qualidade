@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Contato dos usuários cadastrados</title>
+    <!-- 1. Sugestão: O título poderia ser mais conciso, como "Formulário de Contato". -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -51,44 +52,62 @@
         }
 
         button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        /* 2. Atenção: Há uma duplicação do seletor `button`. 
+             Isso pode causar conflitos ou sobreposição de estilos. 
+             Unifique as regras em um único bloco.  */
     </style>
 </head>
 <body>
 
     <button id="navigateBtn">Ir para Cadastro de Users</button>
+    <!-- 3. Sugestão: O texto do botão poderia ser mais claro, como "Voltar ao Cadastro". -->
 
 <div class="container">
     <h1>Contato</h1>
     <form action="your-backend-script.php" method="GET">
+        <!-- 4. Atenção: O método GET não é recomendado para envio de formulários com dados sensíveis. 
+             Use POST para maior segurança. -->
         <label for="name">Nome:</label>
         <input type="text" id="name" name="name" required placeholder="Informe o nome do usuário criado aqui.">
+        <!-- 5. Sugestão: O placeholder poderia ser mais simples, como "Digite seu nome". -->
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email">
+        <!-- 6. Atenção: O campo de email não está marcado como `required`. 
+             Se for obrigatório, adicione o atributo `required`. -->
 
         Mensagem:
+        <!-- 7. Atenção: Falta a tag <label> para o campo de mensagem. 
+             Isso é importante para acessibilidade. -->
         <textarea id="message" name="message" rows="" required></textarea>
+        <!-- 8. Atenção: O atributo `rows` está vazio. Defina um valor padrão, como `rows="5"`. -->
 
         <button type="submit" onclick="enviaProBack()">Enviar</button>
+        <!-- 9. Atenção: O evento `onclick` não é necessário se o formulário já tem `action` e `method`. 
+             Além disso, a função `enviaProBack()` não está definida no código. -->
     </form>
 </div>
 
 <script src="../scripts/utilsScript.js"></script>
+<!-- 10. Atenção: Verifique se o caminho do script está correto. 
+      O uso de "../" pode causar problemas se a estrutura de pastas mudar. -->
 
 </body>
 </html>
 
 <script>
     document.getElementById("navigateBtn").addEventListener("click", function() {
-    window.location.href = "paginas/home.html";  // Redireciona para 'index.html' ao clicar no botão
-});
+        window.location.href = "paginas/home.html";  // Redireciona para 'index.html' ao clicar no botão
+    });
+    <!-- 11. Atenção: O comentário dentro do script está incorreto. 
+         O redirecionamento é para "home.html", não "index.html". -->
 </script>

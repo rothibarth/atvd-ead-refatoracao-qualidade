@@ -1,90 +1,26 @@
 <!DOCTYPE html>
-<html>
-<head><title>cadastro usuarios</title>
-    <link rel="stylesheet" type="text/css" href="styles.CSS">
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuários</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="./js/script1.js"></script>
+    <script src="./js/scriptExtra.js"></script>
+    <script src="./js/utilsScript.js"></script>
 </head>
-<body style="background:#f5f5f5;font-family:Arial;">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        label {
-            font-size: 14px;
-            color: #333;
-            margin-bottom: 8px;
-            display: block;
-        }
-        input {
-        width: 100%;
-            padding: 10px;
-        margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        box-sizing: border-box;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
+<body>
+    <div class="container">
+        <h1>Cadastro de Usuários</h1>
+        <label for="nomeUsuario">Nome:</label>
+        <input type="text" id="nomeUsuario" placeholder="Digite seu nome">
+        <label for="emailUsuario">Email:</label>
+        <input type="email" id="emailUsuario" placeholder="Digite seu email">
+        <button onclick="adicionarusuario()">Adicionar</button>
+        <h2>Usuários Cadastrados</h2>
+        <ul id="listausers"></ul>
+    </div>
 
-        button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-    </style>
-
-<button id="navigateBtn">Ir para a Tela de Contato</button>
-
-<center>
-    <h1>cadastro usuarios</h1>
-</center>
-Nome: <input type="email" for="nome" id="nomeUsuario"> <br>
-Email: <input type="text" id="emailUsuario"> <br>
-<button onclick="adicionarusuario()" style="background:red;color:white;padding:5px;">Adicionar</button>
-<button onclick="adicionarusuario()" style="background:red;color:white;padding:5px;">Adicionar</button>
-<h6>usuarios cadastrados</h6>
-<ul id="listausers"></ul>
-
-<script src="js/script1.js"></script>
-<script src="scripts/utilsScript.js"></script>
-<script src="scripts2/scriptExtra.js"></script>
-
+    
 </body>
 </html>
-
-<script>
-    document.getElementById("navigateBtn").addEventListener("click", function() {
-    window.location.href = "paginas/contato.html";  // Redireciona para 'tela2.html' ao clicar no botão
-});
-</script>
